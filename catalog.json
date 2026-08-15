@@ -1,0 +1,60 @@
+{
+  "schema_version": "1",
+  "database_version": "1.0.0",
+  "selection_rules": {
+    "priority": ["manufacturer", "generation", "platform", "socket_or_chipset", "hardware_evidence"],
+    "platforms": ["mobile", "desktop", "hedt", "server"],
+    "hard_separation": [
+      "mobile_vs_hedt",
+      "desktop_vs_hedt",
+      "intel_vs_amd",
+      "generation_mismatch"
+    ]
+  },
+  "sources": {
+    "EFI-BASE.zip": {
+      "families": [
+        "Intel Desktop 11th Gen Rocket Lake",
+        "Intel Desktop 12th Gen Alder Lake",
+        "Intel Desktop 13th/14th Gen Raptor Lake",
+        "Intel Desktop 15th Gen Core Ultra 200 / Arrow Lake",
+        "Intel HEDT Nehalem",
+        "Intel HEDT Westmere",
+        "Intel HEDT Sandy Bridge-E / X79",
+        "Intel HEDT Ivy Bridge-E / X79",
+        "Intel HEDT Haswell-E / X99",
+        "Intel HEDT Broadwell-E / X99",
+        "Intel HEDT Skylake-X / X299",
+        "Intel HEDT Cascade Lake-X / X299"
+      ]
+    },
+    "EFI-BASE2.zip": {
+      "families": [
+        "AMD Bulldozer / FX",
+        "AMD Ryzen / Threadripper",
+        "Intel 1st Gen Lynnfield / Clarkdale",
+        "Intel 2nd Gen Sandy Bridge",
+        "Intel 3rd Gen Ivy Bridge",
+        "Intel 4th Gen Haswell",
+        "Intel 5th Gen Broadwell",
+        "Intel 6th Gen Skylake",
+        "Intel 7th Gen Kaby Lake",
+        "Intel 8th Gen Coffee Lake",
+        "Intel 9th Gen Coffee Lake Refresh",
+        "Intel 10th Gen Comet Lake"
+      ]
+    }
+  },
+  "explicit_platform_distinctions": [
+    {
+      "family": "Ivy Bridge",
+      "normal_platform": "desktop_or_mobile",
+      "source": "EFI-BASE2.zip"
+    },
+    {
+      "family": "Ivy Bridge-E",
+      "normal_platform": "hedt_x79",
+      "source": "EFI-BASE.zip"
+    }
+  ]
+}
