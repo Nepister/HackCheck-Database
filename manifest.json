@@ -1,0 +1,24 @@
+{
+  "database": "HackCheck Database",
+  "database_version": "1.0.0",
+  "schema_version": "1",
+  "release_tag": "database-v1.0.0",
+  "updated": "2026-08-14",
+  "transport": {
+    "git_lfs": true
+  },
+  "packages": {
+    "EFI-BASE.zip": {
+      "path": "Bases/EFI-BASE.zip",
+      "sha256": "6c2dac2a98925efaf2a3c8950b8b27acd43fc226a4b383a0c7ffe29cc9f4e131",
+      "size": 363396438,
+      "role": "Intel modern + HEDT"
+    },
+    "EFI-BASE2.zip": {
+      "path": "Bases/EFI-BASE2.zip",
+      "sha256": "edbe902afbadb2fee9cab53002c51dfa4269b050c49f15ad7c63cfa0718aa85d",
+      "size": 365484971,
+      "role": "Intel legacy/Desktop/Mobile + AMD"
+    }
+  }
+}
